@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/flights" method="POST">
+    <label>Airline:</label>
+        <select name="airline">
+            <option value="American"></option>
+            <option value="Southwest"></option>
+            <option value="United"></option>
+        </select>
+    <label>Airport:</label>
+        <select name="airport">
+            <option value="AUS"></option>
+            <option value="DFW"></option>
+            <option value="DEN"></option>
+            <option value="LAX"></option>
+            <option value="SAN"></option>
+        </select>
+    <label>Flight Number:</label>
+        <input type="number" placeholder="Enter number between 20 and 9999">
+    <label>Departs:</label>
+        <input type="datetime">
+</form>
+
+<%- include('../partials/header') %>
