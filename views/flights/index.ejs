@@ -1,10 +1,23 @@
 <%- include('../partials/header') %>
-
-<%= flights.forEach(function(flight) { %>
-    <div>Airline: <%= ${flight.airline}</div>
-    <div>Airport: <%= ${flight.airport}</div>
-    <div>Flight Number: <%= ${flight.flightNo}</div>
-    <div>Departs: <%= ${flight.departs}</div>
-<%= }); %>
-
+<table>
+<thead>
+    <tr>
+    <th>Airline</th>
+    <th>Aiport</th>
+    <th>Flight Number</th>
+    <th>Departure</th>
+    </tr>
+</thead>
+<tbody>
+    <% flights.forEach(function(f) { %>
+    <tr>
+        <td><%= f.airline %></td>
+        <td><%= f.airport %></td>
+        <td><%= f.flightNo %></td>
+        <td><%= f.departs %></td>
+        <td><a href="/flights/<%= f._id %>">More Info</a></td>
+    </tr>
+<% }); %>
+</tbody>
+</table>
 <%- include('../partials/footer') %>
